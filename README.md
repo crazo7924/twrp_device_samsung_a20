@@ -1,18 +1,16 @@
 ## TWRP Samsung Galaxy A20
 
-## How-to compile it:
+## How to compile it:
 
 To build:
 
-```sh
-. build/envsetup.sh
+`. build/envsetup.sh
 lunch omni_a20-eng
-m recoveryimage
+m recoveryimage`
 
 ## How to find the image built
 
-```sh
-cd $OUT
+`cd $OUT`
 
 see
 recovery.img
