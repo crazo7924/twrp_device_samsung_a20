@@ -42,7 +42,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Kernel
-BOARD_KERNEL_IMAGE_NAME := Image 
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := ""
@@ -53,10 +53,10 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
 
 # mkbootimg arguments
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset 0x01000000
 BOARD_MKBOOTIMG_ARGS += --tags_offset 0x00000100
-BOARD_MKBOOTIMG_ARGS += --board SRPSA16A001 
+BOARD_MKBOOTIMG_ARGS += --board SRPSA16A001
 BOARD_MKBOOTIMG_ARGS += --header_version 1
 
 # Platform
@@ -102,4 +102,28 @@ TW_USE_NEW_MINADBD := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 PLATFORM_SECURITY_PATCH := 2025-12-31
 
-
+# SHRP-specific flags
+SHRP_PATH := device/samsung/a30
+# Maintainer name
+SHRP_MAINTAINER := crazo7924
+# Device codename
+SHRP_DEVICE_CODE := a20
+# Storage paths
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+# Enable use of flashlight
+SHRP_FLASH := 1
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/devices/virtual/camera/flash/rear_torch_flash
+# The device's recovery path
+SHRP_REC := /dev/block/13500000.dwmmc0/by-name/recovery
+# Recovery Type [Only for About Section]
+SHRP_REC_TYPE := Treble
+# Recovery Type [Only for About Section]
+SHRP_DEVICE_TYPE := A_Only
+# SHRP Padding Flag (Only for rounded corner devices.)
+SHRP_STATUSBAR_RIGHT_PADDING := 80
+SHRP_STATUSBAR_LEFT_PADDING := 80
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+SHRP_EXPRESS := true
